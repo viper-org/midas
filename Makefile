@@ -153,6 +153,30 @@ CMakeFiles/3.26.4/CompilerIdCXX/CMakeCXXCompilerId.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/midas.dir/build.make CMakeFiles/midas.dir/CMakeFiles/3.26.4/CompilerIdCXX/CMakeCXXCompilerId.cpp.s
 .PHONY : CMakeFiles/3.26.4/CompilerIdCXX/CMakeCXXCompilerId.cpp.s
 
+src/IR/BasicBlock.o: src/IR/BasicBlock.cpp.o
+.PHONY : src/IR/BasicBlock.o
+
+# target to build an object file
+src/IR/BasicBlock.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/midas.dir/build.make CMakeFiles/midas.dir/src/IR/BasicBlock.cpp.o
+.PHONY : src/IR/BasicBlock.cpp.o
+
+src/IR/BasicBlock.i: src/IR/BasicBlock.cpp.i
+.PHONY : src/IR/BasicBlock.i
+
+# target to preprocess a source file
+src/IR/BasicBlock.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/midas.dir/build.make CMakeFiles/midas.dir/src/IR/BasicBlock.cpp.i
+.PHONY : src/IR/BasicBlock.cpp.i
+
+src/IR/BasicBlock.s: src/IR/BasicBlock.cpp.s
+.PHONY : src/IR/BasicBlock.s
+
+# target to generate assembly for a file
+src/IR/BasicBlock.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/midas.dir/build.make CMakeFiles/midas.dir/src/IR/BasicBlock.cpp.s
+.PHONY : src/IR/BasicBlock.cpp.s
+
 src/IR/Function.o: src/IR/Function.cpp.o
 .PHONY : src/IR/Function.o
 
@@ -213,6 +237,9 @@ help:
 	@echo "... CMakeFiles/3.26.4/CompilerIdCXX/CMakeCXXCompilerId.o"
 	@echo "... CMakeFiles/3.26.4/CompilerIdCXX/CMakeCXXCompilerId.i"
 	@echo "... CMakeFiles/3.26.4/CompilerIdCXX/CMakeCXXCompilerId.s"
+	@echo "... src/IR/BasicBlock.o"
+	@echo "... src/IR/BasicBlock.i"
+	@echo "... src/IR/BasicBlock.s"
 	@echo "... src/IR/Function.o"
 	@echo "... src/IR/Function.i"
 	@echo "... src/IR/Function.s"
