@@ -4,16 +4,28 @@
 #include <midas/IR/RetInst.h>
 #include <midas/IR/BasicBlock.h>
 #include <midas/IR/Function.h>
+#include <format>
 
 namespace midas
 {
-    void RetInst::print(std::stringstream &stream) const
+    Value* RetInst::getReturnValue() const
     {
-        stream << "ret i32 0";
+        return m_ReturnValue;
     }
 
-    RetInst::RetInst(BasicBlock* parent)
-        :Instruction(parent->getParent()->getModule())
+    void RetInst::print(std::stringstream &stream) const
+    {
+        m_ReturnValue->print(stream);
+        stream << std::format("ret i32 {}", m_ReturnValue->ident());
+    }
+
+    std::string RetInst::ident() const
+    {
+        return "%undef";
+    }
+
+    RetInst::RetInst(BasicBlock* parent, Value* returnValue)
+        :Instruction(parent->getParent()->getModule()), m_ReturnValue(returnValue)
     {
     }
 }

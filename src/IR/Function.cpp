@@ -52,6 +52,11 @@ namespace midas
         stream << "}";
     }
 
+    std::string Function::ident() const
+    {
+        return std::format("@{}", m_Name);
+    }
+
     Function::Function(Module& mod, std::string name, LinkageType linkage)
         :Global(mod), m_Name(std::move(name)), m_Linkage(linkage)
     {

@@ -17,9 +17,14 @@ namespace midas
     {
     friend class Builder;
     public:
+        Value* getReturnValue() const;
+
         void print(std::stringstream& stream) const override;
+        std::string ident() const override;
     private:
-        RetInst(BasicBlock* parent);
+        RetInst(BasicBlock* parent, Value* returnValue);
+
+        Value* m_ReturnValue;
     };
 }
 

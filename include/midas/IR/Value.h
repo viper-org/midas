@@ -20,6 +20,7 @@ namespace midas
         virtual ~Value() {}
 
         virtual void print(std::stringstream& stream) const = 0;
+        virtual std::string ident() const = 0;
     protected:
         Module& mod;
     };

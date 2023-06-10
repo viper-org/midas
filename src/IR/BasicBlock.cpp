@@ -40,6 +40,11 @@ namespace midas
         }
     }
 
+    std::string BasicBlock::ident() const
+    {
+        return std::format("%{}", m_Name);
+    }
+
     BasicBlock::BasicBlock(std::string name, Function* parent)
         :Value(parent->getModule()), m_Name(std::move(name)), m_Parent(parent)
     {

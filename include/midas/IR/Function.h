@@ -28,6 +28,7 @@ namespace midas
         void insertBasicBlock(BasicBlock* bb);
 
         void print(std::stringstream& stream) const override;
+        std::string ident() const override;
     private:
         Function(Module& mod, std::string name, LinkageType linkage);
 

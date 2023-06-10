@@ -16,6 +16,7 @@ namespace midas
     class Instruction;
     class BasicBlock : public Value
     {
+    friend class Function;
     public:
         static BasicBlock* Create(std::string name, Function* parent);
 
@@ -24,8 +25,8 @@ namespace midas
         void insertInstruction(Instruction* instruction);
 
         void print(std::stringstream& stream) const override;
-
-        friend class Function; 
+        std::string ident() const override;
+        
     private:
         BasicBlock(std::string name, Function* parent);
 
