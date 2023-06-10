@@ -19,6 +19,10 @@ namespace midas
     public:
         static BasicBlock* Create(std::string name, Function* parent);
 
+        Function* getParent() const;
+
+        void insertInstruction(Instruction* instruction);
+
         void print(std::stringstream& stream) const override;
 
         friend class Function; 
@@ -26,7 +30,7 @@ namespace midas
         BasicBlock(std::string name, Function* parent);
 
         std::string m_Name;
-        std::vector<Instruction*> m_Insts;
+        std::vector<Instruction*> m_InstructionList;
         Function* m_Parent;
     };
 }

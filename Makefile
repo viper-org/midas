@@ -177,6 +177,30 @@ src/IR/BasicBlock.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/midas.dir/build.make CMakeFiles/midas.dir/src/IR/BasicBlock.cpp.s
 .PHONY : src/IR/BasicBlock.cpp.s
 
+src/IR/Builder.o: src/IR/Builder.cpp.o
+.PHONY : src/IR/Builder.o
+
+# target to build an object file
+src/IR/Builder.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/midas.dir/build.make CMakeFiles/midas.dir/src/IR/Builder.cpp.o
+.PHONY : src/IR/Builder.cpp.o
+
+src/IR/Builder.i: src/IR/Builder.cpp.i
+.PHONY : src/IR/Builder.i
+
+# target to preprocess a source file
+src/IR/Builder.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/midas.dir/build.make CMakeFiles/midas.dir/src/IR/Builder.cpp.i
+.PHONY : src/IR/Builder.cpp.i
+
+src/IR/Builder.s: src/IR/Builder.cpp.s
+.PHONY : src/IR/Builder.s
+
+# target to generate assembly for a file
+src/IR/Builder.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/midas.dir/build.make CMakeFiles/midas.dir/src/IR/Builder.cpp.s
+.PHONY : src/IR/Builder.cpp.s
+
 src/IR/Function.o: src/IR/Function.cpp.o
 .PHONY : src/IR/Function.o
 
@@ -200,6 +224,30 @@ src/IR/Function.s: src/IR/Function.cpp.s
 src/IR/Function.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/midas.dir/build.make CMakeFiles/midas.dir/src/IR/Function.cpp.s
 .PHONY : src/IR/Function.cpp.s
+
+src/IR/RetInst.o: src/IR/RetInst.cpp.o
+.PHONY : src/IR/RetInst.o
+
+# target to build an object file
+src/IR/RetInst.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/midas.dir/build.make CMakeFiles/midas.dir/src/IR/RetInst.cpp.o
+.PHONY : src/IR/RetInst.cpp.o
+
+src/IR/RetInst.i: src/IR/RetInst.cpp.i
+.PHONY : src/IR/RetInst.i
+
+# target to preprocess a source file
+src/IR/RetInst.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/midas.dir/build.make CMakeFiles/midas.dir/src/IR/RetInst.cpp.i
+.PHONY : src/IR/RetInst.cpp.i
+
+src/IR/RetInst.s: src/IR/RetInst.cpp.s
+.PHONY : src/IR/RetInst.s
+
+# target to generate assembly for a file
+src/IR/RetInst.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/midas.dir/build.make CMakeFiles/midas.dir/src/IR/RetInst.cpp.s
+.PHONY : src/IR/RetInst.cpp.s
 
 src/Module.o: src/Module.cpp.o
 .PHONY : src/Module.o
@@ -240,9 +288,15 @@ help:
 	@echo "... src/IR/BasicBlock.o"
 	@echo "... src/IR/BasicBlock.i"
 	@echo "... src/IR/BasicBlock.s"
+	@echo "... src/IR/Builder.o"
+	@echo "... src/IR/Builder.i"
+	@echo "... src/IR/Builder.s"
 	@echo "... src/IR/Function.o"
 	@echo "... src/IR/Function.i"
 	@echo "... src/IR/Function.s"
+	@echo "... src/IR/RetInst.o"
+	@echo "... src/IR/RetInst.i"
+	@echo "... src/IR/RetInst.s"
 	@echo "... src/Module.o"
 	@echo "... src/Module.i"
 	@echo "... src/Module.s"
