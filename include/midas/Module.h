@@ -20,6 +20,7 @@ namespace midas
         ~Module();
 
         std::string_view getName() const;
+        const std::vector<Global*>& getGlobals() const;
         
         void insertGlobal(Global* global);
 

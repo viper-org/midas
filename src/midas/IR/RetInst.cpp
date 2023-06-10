@@ -13,7 +13,7 @@ namespace midas
         return m_ReturnValue;
     }
 
-    void RetInst::print(std::stringstream &stream) const
+    void RetInst::print(std::stringstream& stream) const
     {
         m_ReturnValue->print(stream);
         stream << std::format("ret i32 {}", m_ReturnValue->ident());

@@ -21,12 +21,13 @@ namespace midas
         static BasicBlock* Create(std::string name, Function* parent);
 
         Function* getParent() const;
+        const std::vector<Instruction*>& getInstructions() const;
 
         void insertInstruction(Instruction* instruction);
 
         void print(std::stringstream& stream) const override;
         std::string ident() const override;
-        
+
     private:
         BasicBlock(std::string name, Function* parent);
 

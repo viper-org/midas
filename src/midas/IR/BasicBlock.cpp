@@ -25,6 +25,11 @@ namespace midas
         return m_Parent;
     }
 
+    const std::vector<Instruction*>& BasicBlock::getInstructions() const
+    {
+        return m_InstructionList;
+    }
+
     void BasicBlock::insertInstruction(Instruction* instruction)
     {
         m_InstructionList.push_back(instruction);

@@ -24,12 +24,15 @@ namespace midas
         return m_Name;
     }
 
+    const std::vector<Global*>& Module::getGlobals() const
+    {
+        return m_Globals;
+    }
 
     void Module::insertGlobal(Global* global)
     {
         m_Globals.push_back(global);
     }
-
 
     void Module::print(std::ostream& stream) const
     {

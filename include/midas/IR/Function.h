@@ -24,6 +24,8 @@ namespace midas
 
         Module& getModule() const;
         int& getInstNo();
+        std::string_view getName() const;
+        const std::vector<BasicBlock*>& getBasicBlocks() const;
         
         void insertBasicBlock(BasicBlock* bb);
 

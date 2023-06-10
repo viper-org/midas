@@ -26,6 +26,16 @@ namespace midas
         return m_InstNo;
     }
 
+    std::string_view Function::getName() const
+    {
+        return m_Name;
+    }
+
+    const std::vector<BasicBlock*>& Function::getBasicBlocks() const
+    {
+        return m_BasicBlockList;
+    }
+
     void Function::insertBasicBlock(BasicBlock* bb)
     {
         m_BasicBlockList.push_back(bb);
