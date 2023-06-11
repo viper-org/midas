@@ -18,9 +18,11 @@ int main()
 
     midas::AllocaInst* alloca = builder.CreateAlloca("");
 
+    midas::ConstantInt* val = builder.CreateConstantInt(22);
+    builder.CreateStore(alloca, val);
+
     midas::Value* load = builder.CreateLoad(alloca, "");
 
-    midas::ConstantInt* val = builder.CreateConstantInt(22);
     builder.CreateRet(load);
 
     midas::Backend* backend = new midas::CBackend;

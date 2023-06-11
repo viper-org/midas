@@ -44,6 +44,15 @@ namespace midas
         return new LoadInst(m_InsertPoint, ptr, std::move(name));
     }
 
+    StoreInst* Builder::CreateStore(Value* ptr, Value* value)
+    {
+        StoreInst* store = new StoreInst(m_InsertPoint, ptr, value);
+
+        m_InsertPoint->insertInstruction(store);
+
+        return store;
+    }
+
     ConstantInt* Builder::CreateConstantInt(uint64_t value)
     {
         return new ConstantInt(m_InsertPoint, value);

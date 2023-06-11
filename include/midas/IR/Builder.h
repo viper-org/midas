@@ -11,6 +11,7 @@
 #include <midas/IR/RetInst.h>
 #include <midas/IR/Alloca.h>
 #include <midas/IR/LoadInst.h>
+#include <midas/IR/StoreInst.h>
 #include <midas/IR/ConstantInt.h>
 
 namespace midas
@@ -25,6 +26,7 @@ namespace midas
         RetInst* CreateRet(Value* returnValue);
         AllocaInst* CreateAlloca(std::string name);
         LoadInst* CreateLoad(Value* ptr, std::string name);
+        StoreInst* CreateStore(Value* ptr, Value* value);
 
         ConstantInt* CreateConstantInt(uint64_t value);
     private:
