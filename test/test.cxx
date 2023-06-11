@@ -21,5 +21,6 @@ int main()
     midas::Backend* backend = new midas::CBackend;
     backend->compile(mod);
     backend->print(std::cout);
-    //mod.print(std::cout);
+    std::cout << "\n\n\n";
+    mod.print(std::cout);
 }

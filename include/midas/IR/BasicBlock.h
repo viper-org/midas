@@ -21,6 +21,8 @@ namespace midas
         static BasicBlock* Create(std::string name, Function* parent);
 
         Function* getParent() const;
+        std::string_view getName() const;
+        int getNoBranches() const;
         const std::vector<Instruction*>& getInstructions() const;
 
         void insertInstruction(Instruction* instruction);
@@ -34,6 +36,7 @@ namespace midas
         std::string m_Name;
         std::vector<Instruction*> m_InstructionList;
         Function* m_Parent;
+        int m_Branches;
     };
 }
 

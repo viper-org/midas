@@ -25,6 +25,16 @@ namespace midas
         return m_Parent;
     }
 
+    std::string_view BasicBlock::getName() const
+    {
+        return m_Name;
+    }
+
+    int BasicBlock::getNoBranches() const
+    {
+        return m_Branches;
+    }
+
     const std::vector<Instruction*>& BasicBlock::getInstructions() const
     {
         return m_InstructionList;
@@ -51,7 +61,7 @@ namespace midas
     }
 
     BasicBlock::BasicBlock(std::string name, Function* parent)
-        :Value(parent->getModule()), m_Name(std::move(name)), m_Parent(parent)
+        :Value(parent->getModule()), m_Name(std::move(name)), m_Parent(parent), m_Branches(0)
     {
     }
 }

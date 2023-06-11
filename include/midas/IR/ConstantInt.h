@@ -17,7 +17,7 @@ namespace midas
     {
     friend class Builder;
     public:
-        uint64_t getValue();
+        uint64_t getValue() const;
 
         void print(std::stringstream& stream) const override;
         std::string ident() const override;

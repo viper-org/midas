@@ -2,7 +2,7 @@
 
 
 #include <Backend/c/Backend.h>
-#include <Backend/c/Function.h>
+#include <Backend/c/Compiler.h>
 #include <midas/IR/Function.h>
 
 namespace midas

@@ -10,6 +10,8 @@
 
 namespace midas
 {
+    class Function;
+    class RetInst;
     class CBackend : public Backend
     {
     public:
@@ -20,6 +22,12 @@ namespace midas
     private:
         std::stringstream m_Buffer;
     };
+
+    namespace backend
+    {
+        void compileFunction(std::stringstream& buffer, Function* func);
+        void compileRet(std::stringstream& buffer, RetInst* ret);
+    }
 }
 
 #endif // MIDAS_BACKEND_BACKEND_C

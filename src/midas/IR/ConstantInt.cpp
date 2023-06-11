@@ -7,6 +7,11 @@
 
 namespace midas
 {
+    uint64_t ConstantInt::getValue() const
+    {
+        return m_Value;
+    }
+
     void ConstantInt::print(std::stringstream&) const
     {
     }
