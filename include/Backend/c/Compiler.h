@@ -15,6 +15,7 @@ namespace midas
     class Value;
     class Instruction;
     class RetInst;
+    class AllocaInst;
     class ConstantInt;
 
     namespace backend
@@ -26,6 +27,7 @@ namespace midas
         void compileInstruction(std::stringstream& buffer, Instruction* inst);
 
         void compileRet(std::stringstream& buffer, RetInst* ret);
+        void compileAlloca(std::stringstream& buffer, AllocaInst* alloca);
 
         void compileConstantInt(std::stringstream& buffer, ConstantInt* constant);
     }

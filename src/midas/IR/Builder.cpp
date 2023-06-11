@@ -2,6 +2,7 @@
 
 
 #include <midas/IR/Builder.h>
+#include <midas/IR/Function.h>
 
 namespace midas
 {
@@ -21,6 +22,18 @@ namespace midas
         m_InsertPoint->insertInstruction(ret);
 
         return ret;
+    }
+
+    AllocaInst* Builder::CreateAlloca(std::string name)
+    {
+        if(name.empty())
+            name = std::to_string(m_InsertPoint->getParent()->getInstNo()++);
+
+        AllocaInst* alloca = new AllocaInst(m_InsertPoint, std::move(name));
+
+        m_InsertPoint->insertInstruction(alloca);
+
+        return alloca;
     }
 
     ConstantInt* Builder::CreateConstantInt(uint64_t value)

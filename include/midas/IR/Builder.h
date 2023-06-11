@@ -9,6 +9,7 @@
 #define MIDAS_IR_BUILDER_H 1
 #include <midas/IR/BasicBlock.h>
 #include <midas/IR/RetInst.h>
+#include <midas/IR/Alloca.h>
 #include <midas/IR/ConstantInt.h>
 
 namespace midas
@@ -21,6 +22,7 @@ namespace midas
         void setInsertPoint(BasicBlock* newInsertPoint);
 
         RetInst* CreateRet(Value* returnValue);
+        AllocaInst* CreateAlloca(std::string name);
 
         ConstantInt* CreateConstantInt(uint64_t value);
     private:

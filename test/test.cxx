@@ -15,6 +15,9 @@ int main()
 
     midas::Builder builder;
     builder.setInsertPoint(bb);
+
+    builder.CreateAlloca("x");
+
     midas::ConstantInt* val = builder.CreateConstantInt(22);
     builder.CreateRet(val);
 
@@ -22,5 +25,5 @@ int main()
     backend->compile(mod);
     backend->print(std::cout);
     std::cout << "\n\n\n";
-    mod.print(std::cout);
+    //mod.print(std::cout);
 }
