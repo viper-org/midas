@@ -36,6 +36,14 @@ namespace midas
         return alloca;
     }
 
+    LoadInst* Builder::CreateLoad(Value* ptr, std::string name)
+    {
+        if(name.empty())
+            name = std::to_string(m_InsertPoint->getParent()->getInstNo()++);
+
+        return new LoadInst(m_InsertPoint, ptr, std::move(name));
+    }
+
     ConstantInt* Builder::CreateConstantInt(uint64_t value)
     {
         return new ConstantInt(m_InsertPoint, value);

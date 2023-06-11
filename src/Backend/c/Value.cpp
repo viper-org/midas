@@ -4,6 +4,7 @@
 #include <Backend/c/Compiler.h>
 #include <midas/IR/Value.h>
 #include <midas/IR/ConstantInt.h>
+#include <midas/IR/LoadInst.h>
 
 namespace midas
 {
@@ -13,6 +14,8 @@ namespace midas
         {
             if(dynamic_cast<ConstantInt*>(value))
                 compileConstantInt(buffer, dynamic_cast<ConstantInt*>(value));
+            else if(dynamic_cast<LoadInst*>(value))
+                compileLoad(buffer, dynamic_cast<LoadInst*>(value));
         }
     }
 }

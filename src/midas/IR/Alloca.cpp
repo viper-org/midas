@@ -15,7 +15,7 @@ namespace midas
 
     void AllocaInst::print(std::stringstream& stream) const
     {
-        stream << std::format("%{} = alloca i32", m_Name);
+        stream << std::format("%{} = alloca i32\n", m_Name);
     }
 
     std::string AllocaInst::ident() const

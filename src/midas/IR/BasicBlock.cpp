@@ -49,10 +49,7 @@ namespace midas
     {
         stream << std::format("{}:\n", m_Name);
         for(Instruction* inst : m_InstructionList)
-        {
             inst->print(stream);
-            stream << "\n";
-        }
     }
 
     std::string BasicBlock::ident() const
